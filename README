@@ -1,0 +1,15 @@
+Este es el repositorio donde contiene mi codigo para extraer metadatos de una imagen cualquiera, el desafio que tuve fue el colocar bien la ruta ya que no podia especificarla porque estaba dentro de una carpeta, tuve que sacarla y asi fue como funcionó
+priemro hay que instalar las librerias ocupadas, en este caso es:
+
+pip install pillow
+
+despues, creo un archivo .py con:
+
+nano get-image-metadata.py
+
+luego ejecuto con sudo el script:
+
+sudo python3 get-image-metadata.py
+
+deberás colocar tu contraseña para que se pueda ejectur, seguido de esto ya tienes los metadatos que se generan:
+
