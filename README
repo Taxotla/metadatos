@@ -1,16 +1,40 @@
-Este es el repositorio donde contiene mi codigo para extraer metadatos de archivos .pdf, .xlsx, y .docx. el desafio que tuve fue el colocar bien la ruta ya que no podia especificarla porque estaba dentro de una carpeta, hice muchas pruebas hasta que quedó:
-priemro hay que instalar las librerias ocupadas, en este caso es:
+Este es el repositorio donde contiene mi codigo para extraer metadatos de archivos .pdf, .xlsx, y .docx. el desafio que tuve fue el colocar bien la ruta ya que no podia especificarla porque estaba dentro de una carpeta, hice muchas pruebas hasta que quedó, aqui encontrarás una guia para que puedas ejecutar todo lo que viene dentro del repositorio:
 
-pip install python-docx openpyxl PyPDF2
+primero, en una terminal de kali, creamos o activamos nuestro environment:
 
-despues, creo un archivo .py con:
+                python3 -m venv venv 
+    
+de ser necesario, instalamos lo que nos pida:
 
-nano extract-metadata.py
+                sudo apt install python3.11-venv
+  
+con todo instalado, creamos nuestro entorno virtual:
 
-luego ejecuto con sudo el script y asi colocar el directorio como argumento, en este caso quedaría: 
+                python3 -m venv venv  
 
-sudo python3 get-image-metadata.py /home/tabatha/metadatos
+seguido de esto, lo activamos:
 
-deberás colocar tu contraseña para que se pueda ejectur, seguido de esto ya tienes los metadatos que se generan:
+                source venv/bin/activate  
+
+dentro de este entorno, deberemos instalar las dependencias necesarias con: 
+
+                pip install openpyxl python-docx PyPDF2
+
+o podemos ejecutar requeriments para asi poder correr el codigo con las dependencias necesarias:
+
+                pip install -r requeriments.txt
+
+despues, creo un archivo .py que será el que me extraerá los metadatos de cada archivo con:
+
+                nano extract-metadata.py
+
+luego ejecuto con sudo el script creado:
+
+                sudo python3 extract-metadata.py
+
+deberás colocar tu contraseña para que se pueda ejectur, seguido de esto ya tienes los metadatos que se generan de cada documento.
+
+anexo los documentos con los que se generaron los metadatos asi como tambien el requeriments para su favorable ejecución, recuerda que deberás cmabiar la ruta de cada archivo para si poder extraer estos datos.
+mi ruta principal fue "/home/tabatha/metadatos/....."
 
 
